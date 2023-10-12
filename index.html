@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a webpage Using Pure Javascript</title>
+    <!-- <style></style> -->
+    <!-- <script></script> -->
+</head>
+<body id="content_body">
+    
+    <script>
+        //create a header element/tag using javascript
+
+        var h = document.createElement('header');
+        h.innerHTML = 'header';
+        console.log(h);
+
+        //now we tell javascript to place this header inside the body by using id
+
+        /*  Syntax:-
+            document.getElementById('#id_name').appendChild('element name');
+        */
+
+        document.getElementById('content_body').appendChild(h);
+
+        // now we tell javascript to add a class to the header using setAttribute
+
+        /*  Syntax:-
+            documnet.querySelector('elemet name').setAttribute('attribute','class name')
+        */
+        document.querySelector('header').setAttribute('class','a_header');
+
+        //object.member
+        /*  Syntax:-
+            documnet.body.style.'[property]' = '[value]';
+        */
+        document.body.style.margin = '0px';
+
+        var x = document.getElementsByClassName('a_header');
+        x[0].style.width = '99%';
+        x[0].style.height = '100px';
+        x[0].style.backgroundColor = '#FFC0CB';
+        x[0].style.color = 'green';
+        // x[0].style.padding = '60px';
+        x[0].style.fontSize = '3em';
+        x[0].style.textAlign = 'center';
+        x[0].style.border = '4px solid black';
+
+
+        var x = document.getElementsByTagName('header');
+        // console.log(x[0]);
+        x[0].style.lineHeight = '100px';
+
+        //create another element using javascript
+        //1 create an elements
+        let n = document.createElement('nav');
+        //2 enter the text inside the element
+        n.innerHTML = 'navigation';
+        
+        //3 then append the element inside the DOM
+        document.body.appendChild(n);
+        // 4 then append the class on that element to use css
+        document.querySelector('nav').setAttribute('class','a_nav');
+        
+        var y = document.getElementsByClassName('a_nav');
+
+        y[0].style.width = '99%';
+        y[0].style.height = '100px'
+        y[0].style.backgroundColor = '#484155';
+        y[0].style.border = '4px solid black';
+        y[0].style.marginTop = '10px';
+        y[0].style.textAlign = 'center'
+        y[0].style.lineHeight = '100px'
+        y[0].style.color = 'green'
+        y[0].style.fontSize = '3em'
+        
+        //console.log(y[0])
+
+        //console.log(y);
+        //y[0].setAttribute('data-foot','foot1');
+
+        //5 then create a variable to access that class attribute
+
+        var aside1 = document.createElement('aside')
+        var section = document.createElement('section')
+        var aside2 = document.createElement('aside')
+
+        aside1.innerHTML = 'aside-1';
+        section.innerHTML = 'section main';
+        aside2.innerHTML = 'aside-2';
+
+        document.body.appendChild(aside1);
+        document.body.appendChild(section);
+        document.body.appendChild(aside2);
+        //console.log(aside1)
+
+        var arr = document.querySelectorAll('aside');
+        arr.forEach(function (currentValue,index,arr){
+            arr[index].style.display = 'inline-block';
+            arr[index].style.width = '26%';
+            arr[index].style.height = '400px';
+            arr[index].style.backgroundColor = 'red';
+            arr[index].style.textAlign = 'center';
+            arr[index].style.lineHeight = '200px';
+            arr[index].style.fontSize = '3em';
+            arr[index].style.marginTop = '5px';
+            arr[index].style.marginLeft = '15px';
+            arr[index].style.marginRight = '5px';
+            arr[index].style.marginBottom = '5px';
+            // arr[index].style.margin = '10px';
+
+        });
+
+        //using foreach loop of javascript for accessing array
+
+        // console.log(arr)
+         var sec = document.getElementsByTagName('section');
+        //  console.log(sec)
+        sec[0].style.display = 'inline-block';
+        sec[0].style.width = '45%';
+        sec[0].style.height = '400px';
+        sec[0].style.backgroundColor = 'pink';
+        sec[0].style.marginTop = '5px';
+        sec[0].style.textAlign = 'center';
+        sec[0].style.lineHeight = '200px';
+        sec[0].style.fontSize = '3em';
+        sec[0].style.marginTop = '10px';
+
+        
+
+        document.querySelector('aside').style.display = 'inline-block';
+        
+
+        let f = document.createElement('footer');
+        f.innerHTML = 'footer';
+        // console.log(f);
+
+        
+        document.body.appendChild(f);
+
+        document.querySelector('footer').setAttribute('class','a_footer');
+        
+        var z = document.getElementsByClassName('a_footer');
+
+        z[0].style.width = '99%';
+        z[0].style.height = '80px'
+        z[0].style.backgroundColor = '#8485';
+        z[0].style.border = '4px solid black';
+        z[0].style.marginTop = '10px';
+        z[0].style.textAlign = 'center'
+        z[0].style.lineHeight = '80px'
+        z[0].style.color = 'green'
+        z[0].style.fontSize = '3em'
+
+    </script>
+</body>
+</html>
